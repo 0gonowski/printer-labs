@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Printer Labs</title>
+<meta name="description" content="What our browser extensions read, what stays on your device, and the one request they ever make: asking the payment service whether Pro is unlocked.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a class="brand" href="./">Printer Labs</a><nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://github.com/0gonowski/printer-labs/issues">Support</a></nav></header>
+
+<h1>Privacy policy</h1>
+<p class="lead">Our extensions do their work inside your browser. We run no servers that receive your data, and the extensions contain no analytics, no tracking and no ads.</p>
+<p class="muted">Effective date: 26 November 2026. Applies to AdPluck, PicShift and DocShift (ChatGPT to Word, Gemini to Word).</p>
+
+<h2>What we collect</h2>
+<p>Nothing. The extensions do not send us page content, browsing history, files, usage statistics or identifiers. We have no way to see what you do with them.</p>
+
+<h2>What each extension reads, and where it stays</h2>
+<table>
+<tr><th>Extension</th><th>What it reads</th><th>Where it goes</th></tr>
+<tr><td>AdPluck</td><td>The ads shown on Meta Ad Library pages you open: advertiser, dates, text, links and media addresses.</td><td>Used on the page to show badges, filters, downloads and exports. Ads you save are stored in your browser on your computer. Media is downloaded from Meta's servers straight to your Downloads folder.</td></tr>
+<tr><td>PicShift</td><td>The image you choose to save or convert, and the list of images on a page when you open the batch panel.</td><td>Converted on your computer and saved to your Downloads folder. Images are never uploaded.</td></tr>
+<tr><td>DocShift</td><td>The conversation you choose to export. On ChatGPT it is requested from chatgpt.com using the session you are already signed in with; on Gemini it is read from the open page.</td><td>Converted to a document on your computer and saved to your Downloads folder. The conversation is never sent to us or to anyone else. The session token is used only for that one request to the chat site and is not stored.</td></tr>
+</table>
+<p>Settings, saved items and the free-plan counters are kept in your browser's extension storage on your device. Uninstalling an extension deletes them.</p>
+
+<h2>The one outgoing request: checking for Pro</h2>
+<p>On the free plan the extensions contact no one. If you open the Pro checkout, the payment service we use (ExtensionPay) issues a random key for your browser, and from then on the extension asks ExtensionPay, at most a few times a day, whether that key has paid for Pro. The key says nothing about you or the pages you visit, and nothing else is sent.</p>
+
+<h2>Purchases</h2>
+<p>Payments are processed by Stripe through ExtensionPay. Your card details go to Stripe and are never seen by us or by the extension. From ExtensionPay and Stripe we receive your email address, country and payment details such as amount and date, which we use only to give you access to Pro, answer support requests, handle refunds and keep the accounting records the law requires. Their own privacy policies apply to the checkout: <a href="https://extensionpay.com/privacy">ExtensionPay</a>, <a href="https://stripe.com/privacy">Stripe</a>.</p>
+
+<h2>Permissions</h2>
+<p>Each extension asks only for access to the sites it works on, plus storage and downloads. PicShift is the exception: it can read images on any site, because that is the only way to fetch and convert an image you right-click. It reads an image only when you ask it to.</p>
+
+<h2>Children</h2>
+<p>The extensions are general-purpose tools and are not directed at children.</p>
+
+<h2>Changes and contact</h2>
+<p>If this policy changes, the new version will be published on this page with a new effective date. Questions: <a href="https://github.com/0gonowski/printer-labs/issues">the support page</a>.</p>
+
+<footer class="site">Printer Labs · independent software, not affiliated with OpenAI, Google or Meta.</footer>
+</div>
+</body>
+</html>
