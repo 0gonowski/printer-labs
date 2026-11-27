@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to get ChatGPT and Gemini equations into Word as real, editable equations</title>
+<meta name="description" content="Pasting a ChatGPT or Gemini answer into Word leaves LaTeX code instead of formulas. Three ways to get native Word equations: Word's own LaTeX input, pandoc, or a one-click export.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a class="brand" href="./">Printer Labs</a><nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://github.com/0gonowski/printer-labs/issues">Support</a></nav></header>
+
+<h1>How to get ChatGPT and Gemini equations into Word as real, editable equations</h1>
+<p class="lead">Copy an answer with math from ChatGPT or Gemini into Word and the formulas arrive as LaTeX source: backslashes, braces and dollar signs instead of fractions and integrals. Here are three ways to end up with native Word equations you can click and edit.</p>
+<p class="muted">Updated 27 November 2026. Written by Printer Labs, the developer of DocShift, the third method below.</p>
+
+<h2>Why the formulas break</h2>
+<p>Chat assistants write math in LaTeX and draw it on the page with a rendering library. Copying takes either the drawn result, which Word sees as loose characters, or the LaTeX source, which Word shows as plain text. Word has its own equation format (OMML), so something has to convert LaTeX into it.</p>
+
+<h2>1. One formula at a time, with Word's LaTeX input</h2>
+<ol>
+<li>Ask the assistant for the LaTeX of the formula, or copy it from the answer.</li>
+<li>In Word, press <strong>Alt+=</strong> to insert an equation.</li>
+<li>On the Equation tab, switch the input format to <strong>LaTeX</strong>.</li>
+<li>Paste the formula without the surrounding <code>$</code>, <code>\(</code> or <code>\[</code> delimiters.</li>
+<li>Choose <strong>Convert</strong>, then <strong>Professional</strong>.</li>
+</ol>
+<p>Free and built in, but slow for an answer with many formulas, and tables and headings still need fixing by hand.</p>
+
+<h2>2. A whole answer, with pandoc</h2>
+<p>Save the copied answer as <code>answer.md</code> and run:</p>
+<pre>pandoc -f markdown+tex_math_single_backslash answer.md -o answer.docx</pre>
+<p>The option makes pandoc read ChatGPT's <code>\( \)</code> and <code>\[ \]</code> as math, so the .docx gets real Word equations. It needs pandoc installed and a terminal, and you have to copy the answer as Markdown first. The same works for answers from Claude.</p>
+
+<h2>3. The whole chat, in one click</h2>
+<p>DocShift adds an Export button to chatgpt.com and gemini.google.com. You choose the whole chat, only the answers, or the messages you tick, and get a .docx in which:</p>
+<ul>
+<li>every formula is a native Word equation: fractions, integrals, sums, matrices, aligned steps;</li>
+<li>tables are real tables, lists keep their nesting, headings use Word's heading styles;</li>
+<li>code keeps its spacing in a monospace font.</li>
+</ul>
+<p>The chat is converted in your browser; nothing is uploaded. PDF, Markdown, HTML and plain text are there too. Five exports a week are free, equations included; Pro is $2.99 a month or $19.99 once.</p>
+<div class="cta"><a class="btn" href="https://chromewebstore.google.com/detail/chatgpt-gemini-to-word-pd/jgfbbnekgjebhpeganjdichbadmenfba?utm_source=printerlabs_site&utm_medium=website&utm_campaign=chatgpt-equations-to-word">Add DocShift to Chrome</a><span class="muted">5 free exports every week</span></div>
+
+<h2>Questions</h2>
+<h3>Can I still edit the equations later?</h3>
+<p>Yes. With all three methods the result is Word's own equation format: double-click a formula to change it, as if you had typed it in Word.</p>
+<h3>What about Google Docs?</h3>
+<p>Open the .docx in Google Docs: the equations come across as Google Docs equations.</p>
+<h3>Does the PDF keep the formulas sharp?</h3>
+<p>Yes. Save the Word file as PDF, or export PDF from DocShift directly; the formulas are text, not pictures.</p>
+
+<p>Related: <a href="chatgpt-to-word-exporters-compared.html">ChatGPT to Word exporters compared</a>.</p>
+
+<footer class="site">Printer Labs · independent software, not affiliated with OpenAI, Google, Anthropic or Microsoft. ChatGPT, Gemini, Claude and Word are trademarks of their owners.</footer>
+</div>
+</body>
+</html>

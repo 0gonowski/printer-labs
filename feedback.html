@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Something not working? — Printer Labs</title>
+<meta name="description" content="Quick fixes for DocShift, AdPluck and PicShift, and a one-click way to report a problem.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a class="brand" href="./">Printer Labs</a><nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://github.com/0gonowski/printer-labs/issues">Support</a></nav></header>
+
+<h1 id="title">Something not working?</h1>
+<p class="lead" id="lead">Most problems have a quick fix. If yours is not below, report it in one click and we will look at it.</p>
+
+<h2>Quick fixes</h2>
+<ul id="fixes"></ul>
+
+<h2>Report a problem</h2>
+<p>The button opens a report on GitHub with the product name filled in; nothing is sent until you submit it there. Please describe what happened without personal details.</p>
+<div class="cta"><a class="btn" id="report" href="https://github.com/0gonowski/printer-labs/issues" target="_blank" rel="noopener">Report a problem</a><span class="muted" id="reinstall"></span></div>
+
+<p class="muted">This page sends nothing by itself. Its address only says which extension you came from, so the right tips are shown.</p>
+
+<footer class="site">Printer Labs · independent software, not affiliated with OpenAI, Google, Anthropic or Meta.</footer>
+</div>
+<script>
+// Which product sent the visitor (?p=) and from where (?from=uninstall|note) only change the texts on this page.
+(() => {
+  const PRODUCTS = {
+    docshift: {
+      name: 'DocShift',
+      store: 'https://chromewebstore.google.com/detail/chatgpt-gemini-to-word-pd/jgfbbnekgjebhpeganjdichbadmenfba',
+      fixes: [
+        'No Export button? Reload the chat page once after installing, then open a conversation (not the start page).',
+        'It says you are signed out? Sign in to the chat site in the same tab, reload the page and try again.',
+        'A long chat looks cut off? Wait until the whole chat has loaded, then export again.',
+        'A formula came out wrong? Report it with the formula text: those reports get fixed first.',
+      ],
+    },
+    adpluck: {
+      name: 'AdPluck',
+      store: 'https://chromewebstore.google.com/detail/adpluck-ad-library-downlo/dppehnajeaghaacdkebgghagoennnngf',
+      fixes: [
+        'No buttons on the ads? AdPluck works only on Meta Ad Library (facebook.com/ads/library). Reload that page once after installing.',
+        'Buttons disappeared after a while? Meta sometimes changes the library; report it and we usually fix it within days.',
+        'A video saved without sound or in low quality? Report the ad’s library ID so we can check that ad.',
+      ],
+    },
+    picshift: {
+      name: 'PicShift',
+      store: '#',
+      fixes: [
+        'No PicShift menu? It appears when you right-click an image; on a page with no images, use the toolbar icon.',
+        'An image will not save? Some sites block direct downloads; try “Copy image as PNG” instead.',
+        'The saved image looks wrong? Report the image type (WebP, AVIF, SVG…) and the site.',
+      ],
+    },
+  };
+  const q = new URLSearchParams(location.search);
+  const p = PRODUCTS[q.get('p')];
+  const removed = q.get('from') === 'uninstall';
+  const all = p ? [p] : Object.values(PRODUCTS);
+  const list = document.getElementById('fixes');
+  for (const prod of all) for (const fix of prod.fixes) {
+    const li = document.createElement('li');
+    li.textContent = (p ? '' : prod.name + ': ') + fix;
+    list.append(li);
+  }
+  if (p) {
+    document.getElementById('title').textContent = removed ? `${p.name} was removed` : `Something not working in ${p.name}?`;
+    document.getElementById('lead').textContent = removed
+      ? `Sorry it did not work out. If something went wrong, the fixes below may help, and a short report helps us make ${p.name} better.`
+      : `Most problems have a quick fix. If yours is not below, report it in one click and we will look at it.`;
+    const report = document.getElementById('report');
+    const url = new URL(report.href.replace(/\/$/, '') + '/new');
+    url.searchParams.set('title', `[${p.name}] `);
+    url.searchParams.set('body', 'What happened:\n\nWhat you expected:\n\nBrowser and version:\n');
+    report.href = url.href;
+    if (removed && /^https:\/\/chromewebstore\.google\.com\//.test(p.store)) {
+      const a = document.createElement('a');
+      a.href = p.store + '?utm_source=printerlabs_site&utm_medium=website&utm_campaign=feedback';
+      a.textContent = `Changed your mind? Reinstall ${p.name}`;
+      document.getElementById('reinstall').append(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>
