@@ -26,6 +26,8 @@ li { margin: 4px 0; }
 .card h3 { margin-top: 0; }
 .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 10px 16px; border-radius: 10px; font-weight: 600; }
 @media (prefers-color-scheme: dark) { .btn { color: #0b1220; } }
+.btn.soon { background: transparent; color: var(--muted); border: 1px dashed var(--line); font-weight: 500; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 15px; }
 th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
 footer.site { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 16px; font-size: 14px; color: var(--muted); }
