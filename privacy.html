@@ -3,17 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy policy — Printer Labs</title>
-<meta name="description" content="What our browser extensions read, what stays on your device, and the one request they ever make: asking the payment service whether Pro is unlocked.">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131416" media="(prefers-color-scheme: dark)">
+<title>Privacy policy — Tabfinch</title>
+<meta name="description" content="What our browser extensions read, what stays on your device, and the one service they talk to: the payment service that says whether Pro is unlocked.">
+<link rel="canonical" href="https://0gonowski.github.io/printer-labs/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tabfinch">
+<meta property="og:url" content="https://0gonowski.github.io/printer-labs/privacy.html">
+<meta property="og:title" content="Privacy policy — Tabfinch">
+<meta property="og:description" content="What our browser extensions read, what stays on your device, and the one service they talk to: the payment service that says whether Pro is unlocked.">
+<meta property="og:image" content="https://0gonowski.github.io/printer-labs/img/preview.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<div class="wrap">
-<header class="site"><a class="brand" href="./">Printer Labs</a><nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://github.com/0gonowski/printer-labs/issues">Support</a></nav></header>
-
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-row">
+    <a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M6.5 22.5h3.6l1.8-7.1a2.4 2.4 0 0 1 2.3-1.9h3.6a2.4 2.4 0 0 1 2.3 1.9l1.8 7.1h3.6"/></svg>Tabfinch</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="docshift.html"><img src="img/docshift.png" alt="" width="20" height="20">DocShift</a>
+      <a href="adpluck.html"><img src="img/adpluck.png" alt="" width="20" height="20">AdPluck</a>
+      <a href="picshift.html"><img src="img/picshift.png" alt="" width="20" height="20">PicShift</a>
+      
+    </nav>
+    <a class="nav-support" href="https://github.com/0gonowski/printer-labs/issues">Support</a>
+  </div>
+</header>
+<main id="main" class="container">
+<article class="prose">
 <h1>Privacy policy</h1>
 <p class="lead">Our extensions do their work inside your browser. We run no servers that receive your data, and the extensions contain no analytics, no tracking and no ads.</p>
-<p class="muted">Effective date: 27 November 2026. Applies to AdPluck, PicShift and DocShift.</p>
+<p class="meta">Effective date: 28 November 2026. Applies to DocShift, AdPluck, PicShift and BubbleBoost.</p>
 
 <h2>What we collect</h2>
 <p>Nothing. The extensions do not send us page content, browsing history, files, usage statistics or identifiers. We have no way to see what you do with them.</p>
@@ -21,31 +44,88 @@
 <h2>What each extension reads, and where it stays</h2>
 <table>
 <tr><th>Extension</th><th>What it reads</th><th>Where it goes</th></tr>
-<tr><td>AdPluck</td><td>The ads shown on Meta Ad Library pages you open: advertiser, dates, text, links and media addresses.</td><td>Used on the page to show badges, filters, downloads and exports. Ads you save are stored in your browser on your computer. Media is downloaded from Meta's servers straight to your Downloads folder.</td></tr>
-<tr><td>PicShift</td><td>The image you choose to save or convert, and the list of images on a page when you open the batch panel.</td><td>Converted on your computer and saved to your Downloads folder. Images are never uploaded.</td></tr>
 <tr><td>DocShift</td><td>The conversation you choose to export. On ChatGPT and Claude it is requested from chatgpt.com or claude.ai using the session you are already signed in with; on Gemini it is read from the open page.</td><td>Converted to a document on your computer and saved to your Downloads folder. The conversation is never sent to us or to anyone else. Your session is used only for that request to the chat site you are on, and nothing from it is stored.</td></tr>
+<tr><td>AdPluck</td><td>The ads shown on Meta Ad Library pages you open: advertiser, dates, text, links and media addresses.</td><td>Used on the page to show badges, filters, downloads and exports. Ads you save are stored in your browser on your computer. Media is downloaded from Meta’s servers straight to your Downloads folder.</td></tr>
+<tr><td>PicShift</td><td>The image you choose to save or convert, and the list of images on a page when you open the batch panel.</td><td>Converted on your computer and saved to your Downloads folder. Images are never uploaded.</td></tr>
+<tr><td>BubbleBoost</td><td>On the Redbubble pages you open: the designs’ tags, prices and favorite buttons, to copy tags, count the most used tags and favorite designs when you start a run.</td><td>Used on the page. Nothing leaves your browser through BubbleBoost: a favorite is sent to Redbubble by Redbubble’s own page, exactly as when you click the heart yourself.</td></tr>
 </table>
-<p>Settings, saved items and the free-plan counters are kept in your browser's extension storage on your device. Uninstalling an extension deletes them.</p>
+<p>Settings, saved items, the progress of a run and the free-plan counters are kept in your browser’s extension storage on your device. Uninstalling an extension deletes them.</p>
 
-<h2>The one outgoing request: checking for Pro</h2>
-<p>On the free plan the extensions contact no one. If you open the Pro checkout, the payment service we use (ExtensionPay) issues a random key for your browser, and from then on the extension asks ExtensionPay, at most a few times a day, whether that key has paid for Pro. The key says nothing about you or the pages you visit, and nothing else is sent.</p>
+<h2>The one service they talk to: checking for Pro</h2>
+<p>Pro is sold through ExtensionPay (extensionpay.com). For each extension, ExtensionPay issues a random key for your browser, and the extension asks ExtensionPay whether that key has Pro, or for BubbleBoost a trial. The key says nothing about you or the pages you visit, and nothing else is sent.</p>
+<p>DocShift, AdPluck and PicShift get that key only when you open the Pro checkout; until then they contact no one but the site they work on, and afterwards they ask at most a few times a day. BubbleBoost’s copy of ExtensionPay’s library creates the key when it first checks your plan, and keeps the key and ExtensionPay’s last answer in your browser’s extension storage, which your browser may sync between your own devices if you turned sync on.</p>
 
-<h2>Purchases</h2>
-<p>Payments are processed by Stripe through ExtensionPay. Your card details go to Stripe and are never seen by us or by the extension. From ExtensionPay and Stripe we receive your email address, country and payment details such as amount and date, which we use only to give you access to Pro, answer support requests, handle refunds and keep the accounting records the law requires. Their own privacy policies apply to the checkout: <a href="https://extensionpay.com/privacy">ExtensionPay</a>, <a href="https://stripe.com/privacy">Stripe</a>.</p>
+<h2>Purchases and the BubbleBoost trial</h2>
+<p>Payments are processed by Stripe through ExtensionPay. Your card details go to Stripe and are never seen by us or by the extension. To buy Pro, or to start BubbleBoost’s free trial, you enter your e-mail address on ExtensionPay’s own page. From ExtensionPay and Stripe we receive your e-mail address, country and payment details such as amount and date, which we use only to give you access to Pro, answer support requests, handle refunds and keep the accounting records the law requires. Their own privacy policies apply to their pages: <a href="https://extensionpay.com/privacy">ExtensionPay</a>, <a href="https://stripe.com/privacy">Stripe</a>.</p>
 
 <h2>Permissions</h2>
-<p>Each extension asks only for access to the sites it works on, plus storage and downloads. PicShift is the exception: it can read images on any site, because that is the only way to fetch and convert an image you right-click. It reads an image only when you ask it to.</p>
+<p>Each extension asks only for access to the sites it works on, plus the browser features its job needs, such as storage and downloads. PicShift is the exception: it can read images on any site, because that is the only way to fetch and convert an image you right-click. It reads an image only when you ask it to.</p>
 
 <h2>When you remove an extension</h2>
-<p>Removing one of our extensions opens a page on this site with quick fixes and a way to report a problem. Like every page here it is served by GitHub Pages; its address carries only the name of the extension, and the page sends nothing unless you choose to report a problem.</p>
+<p>Removing DocShift, AdPluck or PicShift opens a page on this site with quick fixes and a way to report a problem. Like every page here it is served by GitHub Pages; its address carries only the name of the extension, and the page sends nothing unless you choose to report a problem.</p>
 
 <h2>Children</h2>
 <p>The extensions are general-purpose tools and are not directed at children.</p>
 
 <h2>Changes and contact</h2>
 <p>If this policy changes, the new version will be published on this page with a new effective date. Questions: <a href="https://github.com/0gonowski/printer-labs/issues">the support page</a>.</p>
-
-<footer class="site">Printer Labs · independent software, not affiliated with OpenAI, Google, Anthropic or Meta.</footer>
-</div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M6.5 22.5h3.6l1.8-7.1a2.4 2.4 0 0 1 2.3-1.9h3.6a2.4 2.4 0 0 1 2.3 1.9l1.8 7.1h3.6"/></svg>Tabfinch</a>
+      <p>Browser extensions for ChatGPT, Gemini, Meta Ad Library, and any image on the web.</p>
+    </div>
+    <nav aria-label="Extensions">
+      <h2 class="footer-h">Extensions</h2>
+      <ul>
+        <li><a href="docshift.html">DocShift</a></li>
+        <li><a href="adpluck.html">AdPluck</a></li>
+        <li><a href="picshift.html">PicShift</a></li>
+        
+      </ul>
+    </nav>
+    <nav aria-label="Guides">
+      <h2 class="footer-h">Guides</h2>
+      <ul>
+        <li><a href="chatgpt-equations-to-word.html">ChatGPT equations in Word</a></li>
+        <li><a href="chatgpt-to-word-exporters-compared.html">ChatGPT to Word exporters compared</a></li>
+        <li><a href="download-meta-ad-library-videos.html">Download Meta Ad Library videos</a></li>
+        <li><a href="meta-ad-library-long-running-ads-csv.html">Long-running ads to CSV</a></li>
+        <li><a href="webp-to-png-chrome.html">Save WebP as PNG or JPG</a></li>
+        <li><a href="save-image-as-type-removed.html">Where “Save image as Type” went</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Tabfinch">
+      <h2 class="footer-h">Help</h2>
+      <ul>
+        <li><a href="https://github.com/0gonowski/printer-labs/issues">Support</a></li>
+        <li><a href="feedback.html">Something not working?</a></li>
+        <li><a href="privacy.html" aria-current="page">Privacy policy</a></li>
+        <li><a href="terms.html">Terms and refunds</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container footer-legal">
+    <p>© 2026 Tabfinch. Independent software, not affiliated with OpenAI, Google, Anthropic, Microsoft, Meta, Mozilla or Redbubble. ChatGPT, Gemini, Claude, Word, Edge, Meta Ad Library, Firefox and Redbubble are trademarks of their owners.</p>
+  </div>
+</footer>
+<script>
+// Puts the visitor's own browser first among the store buttons, when that store already has the extension.
+(() => {
+  const ua = navigator.userAgent;
+  const mine = /\bEdg\//.test(ua) ? 'edge' : /\bFirefox\//.test(ua) ? 'firefox' : null;
+  if (!mine) return;
+  for (const group of document.querySelectorAll('.stores')) {
+    const link = group.querySelector(`a[data-store="${mine}"]`);
+    const primary = group.querySelector('.btn-primary');
+    if (!link || !primary || link === primary) continue;
+    primary.classList.replace('btn-primary', 'btn-ghost');
+    link.classList.replace('btn-ghost', 'btn-primary');
+    group.prepend(link);
+  }
+})();
+</script>
 </body>
 </html>

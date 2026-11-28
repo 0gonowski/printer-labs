@@ -1,6 +1,6 @@
-# Printer Labs
+# Tabfinch
 
-Small browser extensions that do one job well: DocShift (ChatGPT and Gemini chats to Word with real equations), AdPluck (Meta Ad Library downloader and CSV export) and PicShift (save any image as PNG, JPG or WebP).
+The missing buttons for the sites you work on: DocShift (ChatGPT and Gemini chats to Word with real equations), AdPluck (Meta Ad Library downloader and CSV export) and PicShift (save any image as PNG, JPG or WebP).
 
 - Site: https://0gonowski.github.io/printer-labs/
 - Privacy policy: https://0gonowski.github.io/printer-labs/privacy.html

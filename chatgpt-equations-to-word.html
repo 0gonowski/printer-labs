@@ -3,17 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131416" media="(prefers-color-scheme: dark)">
 <title>How to get ChatGPT and Gemini equations into Word as real, editable equations</title>
 <meta name="description" content="Pasting a ChatGPT or Gemini answer into Word leaves LaTeX code instead of formulas. Three ways to get native Word equations: Word's own LaTeX input, pandoc, or a one-click export.">
-<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://0gonowski.github.io/printer-labs/chatgpt-equations-to-word.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tabfinch">
+<meta property="og:url" content="https://0gonowski.github.io/printer-labs/chatgpt-equations-to-word.html">
+<meta property="og:title" content="How to get ChatGPT and Gemini equations into Word as real, editable equations">
+<meta property="og:description" content="Pasting a ChatGPT or Gemini answer into Word leaves LaTeX code instead of formulas. Three ways to get native Word equations: Word's own LaTeX input, pandoc, or a one-click export.">
+<meta property="og:image" content="https://0gonowski.github.io/printer-labs/img/docshift-1.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
-<div class="wrap">
-<header class="site"><a class="brand" href="./">Printer Labs</a><nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://github.com/0gonowski/printer-labs/issues">Support</a></nav></header>
+<body data-product="docshift">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-row">
+    <a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M6.5 22.5h3.6l1.8-7.1a2.4 2.4 0 0 1 2.3-1.9h3.6a2.4 2.4 0 0 1 2.3 1.9l1.8 7.1h3.6"/></svg>Tabfinch</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="docshift.html"><img src="img/docshift.png" alt="" width="20" height="20">DocShift</a>
+      <a href="adpluck.html"><img src="img/adpluck.png" alt="" width="20" height="20">AdPluck</a>
+      <a href="picshift.html"><img src="img/picshift.png" alt="" width="20" height="20">PicShift</a>
+      
+    </nav>
+    <a class="nav-support" href="https://github.com/0gonowski/printer-labs/issues">Support</a>
+  </div>
+</header>
+<main id="main" class="container guide-layout">
+<article class="prose">
+<ol class="crumbs"><li><a href="./">All extensions</a></li><li><a href="docshift.html">DocShift</a></li><li aria-current="page">Guide</li></ol>
 
 <h1>How to get ChatGPT and Gemini equations into Word as real, editable equations</h1>
 <p class="lead">Copy an answer with math from ChatGPT or Gemini into Word and the formulas arrive as LaTeX source: backslashes, braces and dollar signs instead of fractions and integrals. Here are three ways to end up with native Word equations you can click and edit.</p>
-<p class="muted">Updated 27 November 2026. Written by Printer Labs, the developer of DocShift, the third method below.</p>
+<p class="muted">Updated 27 November 2026. By Tabfinch, the maker of DocShift (method 3).</p>
 
 <h2>Why the formulas break</h2>
 <p>Chat assistants write math in LaTeX and draw it on the page with a rendering library. Copying takes either the drawn result, which Word sees as loose characters, or the LaTeX source, which Word shows as plain text. Word has its own equation format (OMML), so something has to convert LaTeX into it.</p>
@@ -41,7 +66,7 @@
 <li>code keeps its spacing in a monospace font.</li>
 </ul>
 <p>The chat is converted in your browser; nothing is uploaded. PDF, Markdown, HTML and plain text are there too. Five exports a week are free, equations included; Pro is $2.99 a month or $19.99 once.</p>
-<div class="cta"><a class="btn" href="https://chromewebstore.google.com/detail/chatgpt-gemini-to-word-pd/jgfbbnekgjebhpeganjdichbadmenfba?utm_source=printerlabs_site&utm_medium=website&utm_campaign=chatgpt-equations-to-word">Add DocShift to Chrome</a><span class="muted">5 free exports every week</span></div>
+<div class="cta"><div class="stores stores-one"><a class="btn btn-primary" data-store="chrome" href="https://chromewebstore.google.com/detail/chatgpt-gemini-to-word-pd/jgfbbnekgjebhpeganjdichbadmenfba?utm_source=tabfinch_site&amp;utm_medium=website&amp;utm_campaign=chatgpt-equations-to-word">Add DocShift to Chrome</a></div></div>
 
 <h2>Questions</h2>
 <h3>Can I still edit the equations later?</h3>
@@ -53,7 +78,71 @@
 
 <p>Related: <a href="chatgpt-to-word-exporters-compared.html">ChatGPT to Word exporters compared</a>.</p>
 
-<footer class="site">Printer Labs · independent software, not affiliated with OpenAI, Google, Anthropic or Microsoft. ChatGPT, Gemini, Claude and Word are trademarks of their owners.</footer>
-</div>
+</article>
+<aside class="guide-card" data-product="docshift" aria-label="DocShift">
+  <div class="guide-card-body">
+    <p class="pchip"><img src="img/docshift.png" alt="" width="32" height="32">DocShift</p>
+    <p>Exports ChatGPT and Gemini chats to Word, with every formula as an equation you can edit.</p>
+    <div class="stores stores-one"><a class="btn btn-primary" data-store="chrome" href="https://chromewebstore.google.com/detail/chatgpt-gemini-to-word-pd/jgfbbnekgjebhpeganjdichbadmenfba?utm_source=tabfinch_site&amp;utm_medium=website&amp;utm_campaign=chatgpt-equations-to-word">Add DocShift to Chrome</a></div>
+    <p>Free: 5 exports a week. <a class="arrow-link" href="docshift.html">How it works</a></p>
+  </div>
+</aside>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M6.5 22.5h3.6l1.8-7.1a2.4 2.4 0 0 1 2.3-1.9h3.6a2.4 2.4 0 0 1 2.3 1.9l1.8 7.1h3.6"/></svg>Tabfinch</a>
+      <p>Browser extensions for ChatGPT, Gemini, Meta Ad Library, and any image on the web.</p>
+    </div>
+    <nav aria-label="Extensions">
+      <h2 class="footer-h">Extensions</h2>
+      <ul>
+        <li><a href="docshift.html">DocShift</a></li>
+        <li><a href="adpluck.html">AdPluck</a></li>
+        <li><a href="picshift.html">PicShift</a></li>
+        
+      </ul>
+    </nav>
+    <nav aria-label="Guides">
+      <h2 class="footer-h">Guides</h2>
+      <ul>
+        <li><a href="chatgpt-equations-to-word.html" aria-current="page">ChatGPT equations in Word</a></li>
+        <li><a href="chatgpt-to-word-exporters-compared.html">ChatGPT to Word exporters compared</a></li>
+        <li><a href="download-meta-ad-library-videos.html">Download Meta Ad Library videos</a></li>
+        <li><a href="meta-ad-library-long-running-ads-csv.html">Long-running ads to CSV</a></li>
+        <li><a href="webp-to-png-chrome.html">Save WebP as PNG or JPG</a></li>
+        <li><a href="save-image-as-type-removed.html">Where “Save image as Type” went</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Tabfinch">
+      <h2 class="footer-h">Help</h2>
+      <ul>
+        <li><a href="https://github.com/0gonowski/printer-labs/issues">Support</a></li>
+        <li><a href="feedback.html">Something not working?</a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms and refunds</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container footer-legal">
+    <p>© 2026 Tabfinch. Independent software, not affiliated with OpenAI, Google, Anthropic, Microsoft, Meta, Mozilla or Redbubble. ChatGPT, Gemini, Claude, Word, Edge, Meta Ad Library, Firefox and Redbubble are trademarks of their owners.</p>
+  </div>
+</footer>
+<script>
+// Puts the visitor's own browser first among the store buttons, when that store already has the extension.
+(() => {
+  const ua = navigator.userAgent;
+  const mine = /\bEdg\//.test(ua) ? 'edge' : /\bFirefox\//.test(ua) ? 'firefox' : null;
+  if (!mine) return;
+  for (const group of document.querySelectorAll('.stores')) {
+    const link = group.querySelector(`a[data-store="${mine}"]`);
+    const primary = group.querySelector('.btn-primary');
+    if (!link || !primary || link === primary) continue;
+    primary.classList.replace('btn-primary', 'btn-ghost');
+    link.classList.replace('btn-ghost', 'btn-primary');
+    group.prepend(link);
+  }
+})();
+</script>
 </body>
 </html>

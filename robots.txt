@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://0gonowski.github.io/printer-labs/sitemap.xml

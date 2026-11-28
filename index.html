@@ -3,76 +3,214 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Printer Labs — small browser extensions that do one job well</title>
-<meta name="description" content="DocShift turns ChatGPT and Gemini chats into Word documents with real equations. AdPluck downloads ads from Meta Ad Library. PicShift saves any image as PNG, JPG or WebP.">
 <link rel="stylesheet" href="style.css">
-<style>
-  .product { display: grid; grid-template-columns: 1fr; gap: 14px; border: 1px solid var(--line); border-radius: 14px; padding: 20px; margin: 22px 0; background: var(--soft); }
-  .product img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); display: block; }
-  .product h2 { margin: 0 0 4px; font-size: 22px; }
-  .product p { margin: 0 0 10px; }
-  .product ul { margin: 0 0 14px; }
-  .price { color: var(--muted); font-size: 14px; margin-left: 10px; }
-</style>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131416" media="(prefers-color-scheme: dark)">
+<title>Tabfinch — the missing buttons for ChatGPT, Meta Ad Library, and any image</title>
+<meta name="description" content="DocShift exports ChatGPT and Gemini chats to Word with real equations. AdPluck downloads ads from Meta Ad Library. PicShift saves any image as PNG or JPG.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Tabfinch","url":"https://0gonowski.github.io/printer-labs/","logo":"https://0gonowski.github.io/printer-labs/img/preview.png"},{"@type":"WebSite","name":"Tabfinch","url":"https://0gonowski.github.io/printer-labs/"}]}</script>
+<link rel="canonical" href="https://0gonowski.github.io/printer-labs/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tabfinch">
+<meta property="og:url" content="https://0gonowski.github.io/printer-labs/">
+<meta property="og:title" content="Tabfinch — the missing buttons for ChatGPT, Meta Ad Library, and any image">
+<meta property="og:description" content="DocShift exports ChatGPT and Gemini chats to Word with real equations. AdPluck downloads ads from Meta Ad Library. PicShift saves any image as PNG or JPG.">
+<meta property="og:image" content="https://0gonowski.github.io/printer-labs/img/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. Install an extension and use its free plan straight away. You only type an e-mail address if you buy Pro, and you do that on the payment service’s own page."}},{"@type":"Question","name":"How do I buy Pro?","acceptedAnswer":{"@type":"Answer","text":"From inside the extension. Its upgrade button opens the checkout of ExtensionPay, which takes the payment through Stripe, and Pro unlocks in that browser right after you pay. Your card details go to Stripe only."}},{"@type":"Question","name":"Can I pay once instead of every month?","acceptedAnswer":{"@type":"Answer","text":"Yes. DocShift and AdPluck can be paid monthly or once; PicShift is a one-time purchase only. A one-time purchase includes future updates."}},{"@type":"Question","name":"How do I cancel a monthly plan?","acceptedAnswer":{"@type":"Answer","text":"In DocShift and AdPluck, open the extension’s options and choose “Manage or cancel your plan”. Pro stays on until the end of the month you have already paid for."}},{"@type":"Question","name":"Can I get my money back?","acceptedAnswer":{"@type":"Answer","text":"Yes, within 14 days of buying, no questions asked. Reply to the receipt you were e-mailed, or write to the support page. The terms have the details."}},{"@type":"Question","name":"Can I use Pro on another computer?","acceptedAnswer":{"@type":"Answer","text":"Yes, on your own devices. In the extension choose “Already paid? Restore your purchase” and enter the e-mail address you paid with."}},{"@type":"Question","name":"Which browsers do they work in?","acceptedAnswer":{"@type":"Answer","text":"Desktop Chrome, Edge and Brave, from the Chrome Web Store; Firefox versions are on the way. The page of each extension shows where you can install it today."}}]}</script>
 <meta name="google-site-verification" content="dIZj72uYc4pHXkREYgymBrBg-g4v1l65LRnrPRS6Rco">
 <meta name="msvalidate.01" content="C3AB949E09D393B3681B9D79F6645C38">
 </head>
 <body>
-<div class="wrap">
-<header class="site"><a class="brand" href="./">Printer Labs</a><nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://github.com/0gonowski/printer-labs/issues">Support</a></nav></header>
-
-<h1>Small browser extensions that do one job well</h1>
-<p class="lead">No accounts, no tracking, nothing uploaded. Free for everyday use, with a Pro upgrade for people who use them at volume.</p>
-
-<section class="product" id="docshift">
-  <img src="img/docshift.png" alt="DocShift export window over a chat, and the resulting Word page with equations" width="1280" height="800" loading="lazy">
-  <div>
-    <h2>DocShift</h2>
-    <p>Turns a ChatGPT or Gemini conversation into a real Word document. Equations arrive as native Word equations you can click and edit, tables stay tables, and code keeps its spacing.</p>
-    <ul>
-      <li>Word, PDF, Markdown, HTML and plain text</li>
-      <li>On ChatGPT it reads the conversation data rather than the page layout, so a site redesign does not break it</li>
-      <li>One extension for both sites. Free: 5 exports a week in full quality. Pro: unlimited, $2.99 a month or $19.99 once</li>
-    </ul>
-    <div class="cta"><a class="btn" href="https://chromewebstore.google.com/detail/chatgpt-gemini-to-word-pd/jgfbbnekgjebhpeganjdichbadmenfba?utm_source=printerlabs_site&utm_medium=website&utm_campaign=index">Add DocShift to Chrome</a></div>
-    <p class="muted">Guides: <a href="chatgpt-equations-to-word.html">ChatGPT and Gemini equations into Word</a> · <a href="chatgpt-to-word-exporters-compared.html">ChatGPT to Word exporters compared</a></p>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-row">
+    <a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M6.5 22.5h3.6l1.8-7.1a2.4 2.4 0 0 1 2.3-1.9h3.6a2.4 2.4 0 0 1 2.3 1.9l1.8 7.1h3.6"/></svg>Tabfinch</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="docshift.html"><img src="img/docshift.png" alt="" width="20" height="20">DocShift</a>
+      <a href="adpluck.html"><img src="img/adpluck.png" alt="" width="20" height="20">AdPluck</a>
+      <a href="picshift.html"><img src="img/picshift.png" alt="" width="20" height="20">PicShift</a>
+      
+    </nav>
+    <a class="nav-support" href="https://github.com/0gonowski/printer-labs/issues">Support</a>
   </div>
-</section>
-
-<section class="product" id="adpluck">
-  <img src="img/adpluck.png" alt="AdPluck buttons and days-running badges on ads in Meta Ad Library" width="1280" height="800" loading="lazy">
-  <div>
-    <h2>AdPluck</h2>
-    <p>Adds what Meta Ad Library is missing: a download button on every ad, a badge that shows how long it has been running, filters, and export to CSV.</p>
-    <ul>
-      <li>Images and videos in the best available quality, carousels included</li>
-      <li>A private swipe file stored in your browser</li>
-      <li>Free: unlimited single downloads. Pro: bulk download and full exports, $4.99 a month or $29 once</li>
+</header>
+<main id="main">
+  <section class="container hero">
+    <div>
+      <h1>The missing buttons for the sites you work on.</h1>
+      <p class="lead">Three small browser extensions, each adding what one website left out. They work inside your browser and are free to start.</p>
+      <ul class="assure">
+        <li>No sign-up</li>
+        <li>Nothing uploaded, no tracking</li>
+        <li>14-day refunds</li>
+      </ul>
+    </div>
+    <ul class="adds">
+      <li data-product="docshift"><a href="docshift.html" aria-label="DocShift: an Export button for ChatGPT and Gemini">
+        <span class="adds-site">ChatGPT and Gemini</span><span class="adds-name">DocShift</span>
+        <span class="adds-ui" aria-hidden="true"><span class="mock mock-docshift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 11v6"/><path d="m9 14 3 3 3-3"/></svg>Export</span></span></a></li>
+      <li data-product="adpluck"><a href="adpluck.html" aria-label="AdPluck: Download buttons and days running for Meta Ad Library">
+        <span class="adds-site">Meta Ad Library</span><span class="adds-name">AdPluck</span>
+        <span class="adds-ui" aria-hidden="true"><span class="mock mock-adpluck"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M3 13.5h10"/></svg>Download</span><span class="mock mock-days">202 days</span></span></a></li>
+      <li data-product="picshift"><a href="picshift.html" aria-label="PicShift: Save as PNG, JPG or WebP for any image">
+        <span class="adds-site">Any image, right-clicked</span><span class="adds-name">PicShift</span>
+        <span class="adds-ui" aria-hidden="true"><span class="mock mock-picshift"><img src="img/picshift.png" alt="" width="16" height="16">Save image as PNG</span></span></a></li>
     </ul>
-    <div class="cta"><a class="btn" href="https://chromewebstore.google.com/detail/adpluck-ad-library-downlo/dppehnajeaghaacdkebgghagoennnngf?utm_source=printerlabs_site&utm_medium=website&utm_campaign=index">Add AdPluck to Chrome</a></div>
-    <p class="muted">Guides: <a href="download-meta-ad-library-videos.html">download videos from Meta Ad Library</a> · <a href="meta-ad-library-long-running-ads-csv.html">find long-running ads and export them to CSV</a></p>
+  </section>
+
+  <section class="container" aria-label="Extensions">
+    <div class="pgrid">
+      <article class="pcard" data-product="docshift">
+        <a class="pcard-shot" href="docshift.html" tabindex="-1" aria-hidden="true"><img class="detail" src="img/docshift-detail.webp" width="508" height="96" alt=""></a>
+        <div class="pcard-body">
+          <div class="pcard-head"><img src="img/docshift.png" alt="" width="46" height="46"><div><h3><a href="docshift.html">DocShift</a></h3><p class="for">For ChatGPT and Gemini</p></div></div>
+          <p class="pitch">Export a chat to a Word document in which every formula is a real, editable equation, tables stay tables and code keeps its spacing. PDF and Markdown too.</p>
+          <p class="price"><strong>Free:</strong> 5 exports a week · <strong>Pro:</strong> $2.99 a month or $19.99 once</p>
+          <div class="pcard-actions"><div class="stores stores-one"><a class="btn btn-primary" data-store="chrome" href="https://chromewebstore.google.com/detail/chatgpt-gemini-to-word-pd/jgfbbnekgjebhpeganjdichbadmenfba?utm_source=tabfinch_site&amp;utm_medium=website&amp;utm_campaign=index">Add to Chrome</a></div><a class="arrow-link" href="docshift.html">How DocShift works</a></div>
+        </div>
+      </article>
+
+      <article class="pcard" data-product="adpluck">
+        <a class="pcard-shot" href="adpluck.html" tabindex="-1" aria-hidden="true"><img class="detail" src="img/adpluck-detail.webp" width="680" height="196" alt=""></a>
+        <div class="pcard-body">
+          <div class="pcard-head"><img src="img/adpluck.png" alt="" width="46" height="46"><div><h3><a href="adpluck.html">AdPluck</a></h3><p class="for">For Meta Ad Library</p></div></div>
+          <p class="pitch">Download any ad’s image or video in HD, see how many days each ad has been running, filter the page, and export what you find to CSV.</p>
+          <p class="price"><strong>Free:</strong> unlimited single downloads · <strong>Pro:</strong> $4.99 a month or $29 once</p>
+          <div class="pcard-actions"><div class="stores stores-one"><a class="btn btn-primary" data-store="chrome" href="https://chromewebstore.google.com/detail/adpluck-ad-library-downlo/dppehnajeaghaacdkebgghagoennnngf?utm_source=tabfinch_site&amp;utm_medium=website&amp;utm_campaign=index">Add to Chrome</a></div><a class="arrow-link" href="adpluck.html">How AdPluck works</a></div>
+        </div>
+      </article>
+
+      <article class="pcard" data-product="picshift">
+        <a class="pcard-shot" href="picshift.html" tabindex="-1" aria-hidden="true"><img class="detail" src="img/picshift-detail.webp" width="806" height="234" alt="" loading="lazy"></a>
+        <div class="pcard-body">
+          <div class="pcard-head"><img src="img/picshift.png" alt="" width="46" height="46"><div><h3><a href="picshift.html">PicShift</a></h3><p class="for">For images on any website</p></div></div>
+          <p class="pitch">Right-click an image and save it as PNG, JPG or WebP. WebP and AVIF files are converted on your computer, so they open in the app you actually use.</p>
+          <p class="price"><strong>Free:</strong> unlimited single images · <strong>Pro:</strong> every image on a page at once, $6.99 one-time</p>
+          <div class="pcard-actions"><div class="stores"><p class="status">In store review, available soon</p></div><a class="arrow-link" href="picshift.html">How PicShift works</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>The same rules for every extension</h2>
+        <p>An extension gets access to the sites you work on. This is what ours do with it.</p>
+      </div>
+      <ul class="principles">
+        <li>
+          <h3>Your data stays on your computer</h3>
+          <p>Chats, ads and images are converted inside your browser and saved to your Downloads folder. We run no servers that could receive them.</p>
+        </li>
+        <li>
+          <h3>No tracking of any kind</h3>
+          <p>No analytics, no ads, no affiliate links. Apart from the site an extension works on, it only asks the payment service whether Pro is unlocked.</p>
+        </li>
+        <li>
+          <h3>Free to start, fair to upgrade</h3>
+          <p>Every extension has a free plan with no time limit. Pro is paid monthly or once, checkout runs through Stripe, and a full refund within 14 days is yours if you ask.</p>
+        </li>
+      </ul>
+      <p class="maker"><strong>Who makes these:</strong> Tabfinch, an independent developer. When a website changes and something stops working, a fix goes out as soon as the store approves it. Questions and bug reports: <a href="https://github.com/0gonowski/printer-labs/issues">the support page</a>. The details are in the <a href="privacy.html">privacy policy</a> and the <a href="terms.html">terms</a>.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Questions</h2>
+      </div>
+      <div class="faq" data-faq>
+        <details>
+          <summary>Do I need an account?</summary>
+          <div class="answer"><p>No. Install an extension and use its free plan straight away. You only type an e-mail address if you buy Pro, and you do that on the payment service’s own page.</p></div>
+        </details>
+        <details>
+          <summary>How do I buy Pro?</summary>
+          <div class="answer"><p>From inside the extension. Its upgrade button opens the checkout of ExtensionPay, which takes the payment through Stripe, and Pro unlocks in that browser right after you pay. Your card details go to Stripe only.</p></div>
+        </details>
+        <details>
+          <summary>Can I pay once instead of every month?</summary>
+          <div class="answer"><p>Yes. DocShift and AdPluck can be paid monthly or once; PicShift is a one-time purchase only. A one-time purchase includes future updates.</p></div>
+        </details>
+        <details>
+          <summary>How do I cancel a monthly plan?</summary>
+          <div class="answer"><p>In DocShift and AdPluck, open the extension’s options and choose “Manage or cancel your plan”. Pro stays on until the end of the month you have already paid for.</p></div>
+        </details>
+        <details>
+          <summary>Can I get my money back?</summary>
+          <div class="answer"><p>Yes, within 14 days of buying, no questions asked. Reply to the receipt you were e-mailed, or write to <a href="https://github.com/0gonowski/printer-labs/issues">the support page</a>. The <a href="terms.html">terms</a> have the details.</p></div>
+        </details>
+        <details>
+          <summary>Can I use Pro on another computer?</summary>
+          <div class="answer"><p>Yes, on your own devices. In the extension choose “Already paid? Restore your purchase” and enter the e-mail address you paid with.</p></div>
+        </details>
+        <details>
+          <summary>Which browsers do they work in?</summary>
+          <div class="answer"><p>Desktop Chrome, Edge and Brave, from the Chrome Web Store; Firefox versions are on the way. The page of each extension shows where you can install it today.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M6.5 22.5h3.6l1.8-7.1a2.4 2.4 0 0 1 2.3-1.9h3.6a2.4 2.4 0 0 1 2.3 1.9l1.8 7.1h3.6"/></svg>Tabfinch</a>
+      <p>Browser extensions for ChatGPT, Gemini, Meta Ad Library, and any image on the web.</p>
+    </div>
+    <nav aria-label="Extensions">
+      <h2 class="footer-h">Extensions</h2>
+      <ul>
+        <li><a href="docshift.html">DocShift</a></li>
+        <li><a href="adpluck.html">AdPluck</a></li>
+        <li><a href="picshift.html">PicShift</a></li>
+        
+      </ul>
+    </nav>
+    <nav aria-label="Guides">
+      <h2 class="footer-h">Guides</h2>
+      <ul>
+        <li><a href="chatgpt-equations-to-word.html">ChatGPT equations in Word</a></li>
+        <li><a href="chatgpt-to-word-exporters-compared.html">ChatGPT to Word exporters compared</a></li>
+        <li><a href="download-meta-ad-library-videos.html">Download Meta Ad Library videos</a></li>
+        <li><a href="meta-ad-library-long-running-ads-csv.html">Long-running ads to CSV</a></li>
+        <li><a href="webp-to-png-chrome.html">Save WebP as PNG or JPG</a></li>
+        <li><a href="save-image-as-type-removed.html">Where “Save image as Type” went</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Tabfinch">
+      <h2 class="footer-h">Help</h2>
+      <ul>
+        <li><a href="https://github.com/0gonowski/printer-labs/issues">Support</a></li>
+        <li><a href="feedback.html">Something not working?</a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms and refunds</a></li>
+      </ul>
+    </nav>
   </div>
-</section>
-
-<section class="product" id="picshift">
-  <img src="img/picshift.png" alt="Right-click menu with Save image as PNG, JPG or WebP" width="1280" height="800" loading="lazy">
-  <div>
-    <h2>PicShift</h2>
-    <p>Right-click any image and save it as PNG, JPG or WebP. It converts WebP and AVIF files on your own computer, so the picture opens in the app you actually use.</p>
-    <ul>
-      <li>Copy an image as PNG, ready to paste</li>
-      <li>Nothing is uploaded, and the code is not obfuscated</li>
-      <li>Free: unlimited single images. Pro: whole pages at once, ZIP and resize, $6.99 once</li>
-    </ul>
-    <div class="cta"><span class="btn soon">Add PicShift to Chrome · coming soon</span></div>
-    <p class="muted">Guides: <a href="webp-to-png-chrome.html">save WebP and AVIF as PNG or JPG in Chrome</a> · <a href="save-image-as-type-removed.html">what happened to “Save image as Type”</a></p>
+  <div class="container footer-legal">
+    <p>© 2026 Tabfinch. Independent software, not affiliated with OpenAI, Google, Anthropic, Microsoft, Meta, Mozilla or Redbubble. ChatGPT, Gemini, Claude, Word, Edge, Meta Ad Library, Firefox and Redbubble are trademarks of their owners.</p>
   </div>
-</section>
-
-<h2>Questions</h2>
-<p>Contact: <a href="https://github.com/0gonowski/printer-labs/issues">the support page</a>. Refunds are available for 14 days, no questions asked: see the <a href="terms.html">terms</a>.</p>
-
-<footer class="site">Printer Labs · independent software, not affiliated with OpenAI, Google or Meta. ChatGPT is a trademark of OpenAI; Gemini is a trademark of Google; Meta is a trademark of Meta Platforms.</footer>
-</div>
+</footer>
+<script>
+// Puts the visitor's own browser first among the store buttons, when that store already has the extension.
+(() => {
+  const ua = navigator.userAgent;
+  const mine = /\bEdg\//.test(ua) ? 'edge' : /\bFirefox\//.test(ua) ? 'firefox' : null;
+  if (!mine) return;
+  for (const group of document.querySelectorAll('.stores')) {
+    const link = group.querySelector(`a[data-store="${mine}"]`);
+    const primary = group.querySelector('.btn-primary');
+    if (!link || !primary || link === primary) continue;
+    primary.classList.replace('btn-primary', 'btn-ghost');
+    link.classList.replace('btn-ghost', 'btn-primary');
+    group.prepend(link);
+  }
+})();
+</script>
 </body>
 </html>
